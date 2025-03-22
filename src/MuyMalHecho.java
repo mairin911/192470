@@ -2,42 +2,43 @@ import java.util.Scanner;
 
 public class MuyMalHecho {
     public static void main(String[] args) throws Exception {
-        Scanner S = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         int C = 0;
 
         System.out.println("Número de usuarios a ingresar:");
-        int N = S.nextInt();
-        S.nextLine();
+        byte numeroUsuario = input.nextByte();
+        input.nextLine();
 
-        int E1 = 0, E2 = 0, E3 = 0;
-        String N1 = "", N2 = "", N3 = "";
+        int edadUno = 0, edadDos = 0, edadtres = 0;
+        String usuarioUno = "", usuarioDos = "", usuarioTres = "";
 
-        while (C < N) {
+        while (C < numeroUsuario) {
             System.out.println("Nombre del usuario:");
-            String U = S.nextLine();
+            String nombreUsuario = input.nextLine();
 
             System.out.println("Edad del usuario:");
-            int A = S.nextInt();
-            S.nextLine();
+            Byte edadUsuario = input.nextByte();
+            input.nextLine();
+            input.close();
 
             if (C == 0) {
-                N1 = U;
-                E1 = A;
+                usuarioUno = nombreUsuario;
+                edadUno = edadUsuario;
             } else if (C == 1) {
-                N2 = U;
-                E2 = A;
+                usuarioDos = nombreUsuario;
+                edadDos = edadUsuario;
             } else if (C == 2) {
-                N3 = U;
-                E3 = A;
+                usuarioTres = nombreUsuario;
+                edadtres = edadUsuario;
             }
 
-            if (A >= 18) {
-                System.out.println(U + " es mayor de edad.");
+            if (edadUsuario >= 18) {
+                System.out.println(nombreUsuario + " es mayor de edad.");
             } else {
-                System.out.println(U + " es menor de edad.");
+                System.out.println(nombreUsuario + " es menor de edad.");
             }
 
-            if (A > 120 || A < 1) {
+            if (edadUsuario > 120 || edadUsuario < 1) {
                 System.out.println("Edad no válida.");
             }
 
@@ -45,8 +46,8 @@ public class MuyMalHecho {
         }
 
         System.out.println("Resumen:");
-        System.out.println("Usuario 1: " + N1 + " - Edad: " + E1);
-        System.out.println("Usuario 2: " + N2 + " - Edad: " + E2);
-        System.out.println("Usuario 3: " + N3 + " - Edad: " + E3);
+        System.out.println("Usuario 1: " + usuarioUno + " - Edad: " + edadUno);
+        System.out.println("Usuario 2: " + usuarioDos + " - Edad: " + edadDos);
+        System.out.println("Usuario 3: " + usuarioTres + " - Edad: " + edadtres);
     }
 }

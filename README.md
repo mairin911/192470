@@ -7,3 +7,8 @@
 3. Si el promedio es **mayor o igual a 3.0**, el estudiante aprueba.
 4. Se evalúan exactamente **4 estudiantes**.
 5. Al final, se imprime cuántos aprobaron.
+
+##Ejercicio 1 - optimizacion
+ 
+ primero cambie la letra que estaba por un input y lo cerre, luego empece a aplicar camelCase a todas las variables, luego hice que las variables fueran menos pesadas 
+
